@@ -8,7 +8,7 @@ Red [
 unless empty? args: system/script/args [
 	b: read/binary path: to-red-file system/script/args
 
-	#include %bytemap.red
+	bytemap: #include %bytemap.red
 
 	special-bytes: collect [foreach key keys-of bytemap [keep key keep '|]]
 	take/last special-bytes
